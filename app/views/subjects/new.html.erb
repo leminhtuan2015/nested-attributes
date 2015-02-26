@@ -1,0 +1,11 @@
+<%= form_for @subject  do |f| %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+    <hr>
+    <%= f.fields_for :tasks do |builder| %>
+      <br>
+      <%= builder.label :task_name %>
+      <%= builder.text_field :name %>
+    <% end %>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

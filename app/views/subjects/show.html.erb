@@ -1,0 +1,6 @@
+Subject_name :<%=@subject.name%>
+<hr>
+<%@subject.tasks.each do |task| %>
+<br>
+  Task : <%= task.name %>
+<% end %>
